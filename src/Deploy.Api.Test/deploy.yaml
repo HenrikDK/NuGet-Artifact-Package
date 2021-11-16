@@ -1,0 +1,5 @@
+## Heres some text
+metrics: 
+  enabled: true
+  port: 4210
+  endpoint: /metrics
