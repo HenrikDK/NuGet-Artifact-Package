@@ -1,0 +1,9 @@
+<Project>
+    <Target Name="CopyFiles" BeforeTargets="Build">
+        <ItemGroup>
+            <File Include="$(MSBuildThisFileDirectory)..\yamls\*.*"></File>
+        </ItemGroup>
+        <Copy SourceFiles="@(File)" DestinationFolder="$(ProjectDir)"
+              Condition="Exists('%(FullPath)')"/>
+    </Target>
+</Project>
